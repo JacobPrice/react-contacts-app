@@ -1,34 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+ import ListContacts from './ListContacts'
 
-class ContactList extends React.Component {
-  render() {
-    const people = this.props.contacts
-
-    return <ol>
-      {people.map(person => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ol>
+const contacts = [
+  {
+    "id": "ryan",
+    "name": "Ryan Florence",
+    "email": "ryan@reacttraining.com",
+    "avatarURL": "https://reactnd-contacts-server-hyocvlykwf.now.sh/ryan.jpg"
+  },
+  {
+    "id": "michael",
+    "name": "Michael Jackson",
+    "email": "michael@reacttraining.com",
+    "avatarURL": "https://reactnd-contacts-server-hyocvlykwf.now.sh/michael.jpg"
+  },
+  {
+    "id": "tyler",
+    "name": "Tyler McGinnis",
+    "email": "tyler@reacttraining.com",
+    "avatarURL": "https://reactnd-contacts-server-hyocvlykwf.now.sh/tyler.jpg"
   }
-}
+]
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <ContactList contacts={[
-          { name: 'Jacob' },
-          { name: 'Jane' },
-          { name: 'Doe' }
-        ]}/>
-        <ContactList contacts={[
-          { name: 'Ainsley' },
-          { name: 'John' },
-          { name: 'Adam' }
-        ]}/>
+      <div>
+        <ListContacts contacts={contacts} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
