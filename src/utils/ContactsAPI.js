@@ -1,4 +1,4 @@
-const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://localhost:5001'
+const api = process.env.REACT_APP_CONTACTS_API_URL || 'https://reactnd-contacts-server-bnprrxyedn.now.sh'
 
 let token = localStorage.token
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import ListContacts from './ListContacts'
 import CreateContact from './CreateContact'
@@ -51,4 +51,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
